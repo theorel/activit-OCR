@@ -1,0 +1,268 @@
+import random
+
+#récupère au hasard un des 4 noms d'une maison
+def get_random_item(object_list):  
+    rand_numb = random.randint(0, len(object_list) - 1) 
+    item = object_list[rand_numb] 
+    return item
+
+#on fait combattre deux noms en stockant leur score
+def combat (perso1, perso2):    
+    coups = 10
+    stock1 = stock2 = un = deux = 0
+    score = []    
+       
+    while coups >= 0:
+        
+        un = random.randint(perso1[0], perso1[1])
+        stock1 += un
+        deux = random.randint(perso2[0], perso2[1])        
+        stock2 += deux
+        print(stock1, "vs", stock2)
+        coups = coups - 1    
+    score = [stock1,stock2]
+    return score
+
+#récupère le total de chaque maison pour le classement
+def fightXVE():                        
+    total1 = combat(xantiara_rand1, venissia_rand1) 
+    print(xantiara_rand1[2], "vs", venissia_rand1[2], total1)
+
+    print()
+
+    total2 = combat(xantiara_rand2, venissia_rand2) 
+    print(xantiara_rand2[2], "vs", venissia_rand2[2], total2)
+
+    print()
+
+    total3 = combat(xantiara_rand3, venissia_rand3) 
+    print(xantiara_rand3[2], "vs", venissia_rand3[2], total3)
+
+    print()
+
+    total4 = combat(xantiara_rand4, venissia_rand4) 
+    print(xantiara_rand4[2], "vs", venissia_rand4[2], total4)
+
+    print()
+
+    print ("Xantiara vs Venissia = ", total1[0]+total2[0]+total3[0]+total4[0], "-", total1[1]+total2[1]+total3[1]+total4[1])
+    print()
+    totalXVE = [total1[0]+total2[0]+total3[0]+total4[0], total1[1]+total2[1]+total3[1]+total4[1]]
+    return totalXVE
+
+def fightXVA():                        
+    total1 = combat(xantiara_rand1, vandome_rand1) 
+    print(xantiara_rand1[2], "vs", vandome_rand1[2], total1)
+
+    print()
+
+    total2 = combat(xantiara_rand2, vandome_rand2) 
+    print(xantiara_rand2[2], "vs", vandome_rand2[2], total2)
+
+    print()
+
+    total3 = combat(xantiara_rand3, vandome_rand3) 
+    print(xantiara_rand3[2], "vs", vandome_rand3[2], total3)
+
+    print()
+
+    total4 = combat(xantiara_rand4, vandome_rand4) 
+    print(xantiara_rand4[2], "vs", vandome_rand4[2], total4)
+
+    print()
+
+    print ("Xantiara vs Vandome = ", total1[0]+total2[0]+total3[0]+total4[0], "-", total1[1]+total2[1]+total3[1]+total4[1])
+    print()
+    totalXVA = [total1[0]+total2[0]+total3[0]+total4[0], total1[1]+total2[1]+total3[1]+total4[1]]
+    return totalXVA
+
+def fightXVO():                        
+    total1 = combat(xantiara_rand1, voracie_rand1) 
+    print(xantiara_rand1[2], "vs", voracie_rand1[2], total1)
+
+    print()
+
+    total2 = combat(xantiara_rand2, voracie_rand2) 
+    print(xantiara_rand2[2], "vs", voracie_rand2[2], total2)
+
+    print()
+
+    total3 = combat(xantiara_rand3, voracie_rand3) 
+    print(xantiara_rand3[2], "vs", voracie_rand3[2], total3)
+
+    print()
+
+    total4 = combat(xantiara_rand4, voracie_rand4) 
+    print(xantiara_rand4[2], "vs", voracie_rand4[2], total4)
+
+    print()
+
+    print ("Xantiara vs Voracie = ", total1[0]+total2[0]+total3[0]+total4[0], "-", total1[1]+total2[1]+total3[1]+total4[1])
+    print()
+    totalXVO = [total1[0]+total2[0]+total3[0]+total4[0], total1[1]+total2[1]+total3[1]+total4[1]]
+    return totalXVO
+
+def fightVEVA():                        
+    total1 = combat(venissia_rand1, vandome_rand1) 
+    print(venissia_rand1[2], "vs", vandome_rand1[2], total1)
+
+    print()
+
+    total2 = combat(venissia_rand2, vandome_rand2) 
+    print(venissia_rand2[2], "vs", vandome_rand2[2], total2)
+
+    print()
+
+    total3 = combat(venissia_rand3, vandome_rand3) 
+    print(venissia_rand3[2], "vs", vandome_rand3[2], total3)
+
+    print()
+
+    total4 = combat(venissia_rand4, vandome_rand4) 
+    print(venissia_rand4[2], "vs", vandome_rand4[2], total4)
+
+    print()
+
+    print ("Venissia vs Vandome = ", total1[0]+total2[0]+total3[0]+total4[0], "-", total1[1]+total2[1]+total3[1]+total4[1])
+    print()
+    totalVEVA = [total1[0]+total2[0]+total3[0]+total4[0], total1[1]+total2[1]+total3[1]+total4[1]]
+    return totalVEVA
+
+def fightVEVO():                        
+    total1 = combat(venissia_rand1, voracie_rand1) 
+    print(venissia_rand1[2], "vs", voracie_rand1[2], total1)
+
+    print()
+
+    total2 = combat(venissia_rand2, voracie_rand2) 
+    print(venissia_rand2[2], "vs", voracie_rand2[2], total2)
+
+    print()
+
+    total3 = combat(venissia_rand3, voracie_rand3) 
+    print(venissia_rand3[2], "vs", voracie_rand3[2], total3)
+
+    print()
+
+    total4 = combat(venissia_rand4, voracie_rand4) 
+    print(venissia_rand4[2], "vs", voracie_rand4[2], total4)
+
+    print()
+
+    print ("Venissia vs Voracie = ", total1[0]+total2[0]+total3[0]+total4[0], "-", total1[1]+total2[1]+total3[1]+total4[1])
+    print()
+    totalVEVO = [total1[0]+total2[0]+total3[0]+total4[0], total1[1]+total2[1]+total3[1]+total4[1]]
+    return totalVEVO
+
+def fightVAVO():                        
+    total1 = combat(vandome_rand1, voracie_rand1) 
+    print(vandome_rand1[2], "vs", voracie_rand1[2], total1)
+
+    print()
+
+    total2 = combat(vandome_rand2, voracie_rand2) 
+    print(vandome_rand2[2], "vs", voracie_rand2[2], total2)
+
+    print()
+
+    total3 = combat(vandome_rand3, voracie_rand3) 
+    print(vandome_rand3[2], "vs", voracie_rand3[2], total3)
+
+    print()
+
+    total4 = combat(vandome_rand4, voracie_rand4) 
+    print(vandome_rand4[2], "vs", voracie_rand4[2], total4)
+
+    print()
+
+    print ("Vandome vs Voracie = ", total1[0]+total2[0]+total3[0]+total4[0], "-", total1[1]+total2[1]+total3[1]+total4[1])
+    print()
+    totalVAVO = [total1[0]+total2[0]+total3[0]+total4[0], total1[1]+total2[1]+total3[1]+total4[1]]
+    return totalVAVO    
+
+theorel = [40,60,"theorel"]
+artael = [15,20,"artael"]
+smetreiel = [35,45,"smetreiel"]
+shinsei = [30,40,"shinsei"]
+
+clubber = [30,40,"clubber"]
+rocky = [40,60,"rocky"]
+apollo = [15,20,"apollo"]
+drago = [35,45,"drago"]
+
+charles = [35,45,"charles"]
+henry = [15,20,"henry"]
+pierre = [40,60,"pierre"]
+paul = [30,40,"paul"]
+
+ahrad = [30,40,"ahrad"]
+tariusar = [40,60,"tariusar"]
+aznaar = [35,45,"aznaar"]
+raznor = [15,20,"raznor"]
+
+xantiara = [theorel, artael, smetreiel, shinsei]
+venissia = [clubber, rocky, apollo, drago]
+vandome = [charles, henry, pierre, paul]
+voracie = [ahrad, tariusar, aznaar, raznor]
+
+#obligation de passer par une variable intermediaire pour avoir un random unique qui ne se repete pas
+xantiara_rand1 = get_random_item(xantiara)
+venissia_rand1 = get_random_item(venissia)
+vandome_rand1 = get_random_item(vandome)
+voracie_rand1 = get_random_item(voracie)
+
+xantiara_rand2 = get_random_item(xantiara)
+venissia_rand2 = get_random_item(venissia)
+vandome_rand2 = get_random_item(vandome)
+voracie_rand2 = get_random_item(voracie)
+
+xantiara_rand3 = get_random_item(xantiara)
+venissia_rand3 = get_random_item(venissia)
+vandome_rand3 = get_random_item(vandome)
+voracie_rand3 = get_random_item(voracie)
+
+xantiara_rand4 = get_random_item(xantiara)
+venissia_rand4 = get_random_item(venissia)
+vandome_rand4 = get_random_item(vandome)
+voracie_rand4 = get_random_item(voracie)
+
+print("Bienvenue dans le tournoi des coups de mandales à la volée")
+print()     
+
+#combat entre maisons
+totalXVE = fightXVE() 
+totalXVA = fightXVA()
+totalXVO = fightXVO()
+totalVEVA = fightVEVA()
+totalVEVO = fightVEVO()
+totalVAVO = fightVAVO()
+
+#on récupère l'indice total de chaque maison dans chaque combat
+print("Classement =>")
+print()
+total_X = totalXVE[0] + totalXVA[0] + totalXVO[0]
+total_VE = totalXVE[1] + totalVEVA[0] + totalVEVO[0]
+total_VA = totalXVA[1] + totalVEVA[1] + totalVAVO[0]
+total_VO = totalXVO[1] + totalVEVO[1] + totalVAVO[1]
+
+#classement mais il faudrait une fonction pour mettre dans l'ordre
+print("Xantiara",total_X)
+print("Venissia",total_VE)
+print("Vandome",total_VA)
+print("Voracie",total_VO)
+
+
+
+
+
+  
+
+
+
+
+    
+    
+
+
+
+
