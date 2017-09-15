@@ -1,0 +1,28 @@
+import random #module qui ajoute des méthodes a python
+#si on a besoin que d'un objet d'un module en particulier on utilisera from module import objet et utiliser dans le code methode() au lieu de module.methode()
+
+quotes = ["Ecoutez-moi, Monsieur Shakespeare, nous avons beau être ou ne pas être, nous sommes !", "On doit pouvoir choisir entre s'écouter parler et se faire entendre."]
+characters = ["alvin et les Chipmunks", "Babar", "betty boop", "calimero", "casper", "le chat potté", "Kirikou"]
+
+def get_random_item(object_list):
+    #renvoie un nombre compris entre 0 et la longueur totale de ma liste
+    rand_numb = random.randint(0, len(object_list) - 1) #0 est l'index de la premiere citation et len calcule le nombre d’items dans ma liste (puisque le premier index est 0)
+    item = object_list[rand_numb] # renverra le dernier objet de la liste : trouve l’item qui correspond à l’index déterminé au hasard.
+    return item # renvoie la valeur de l’item
+
+def capitalize(words):
+    for word in words: 
+        return word.capitalize()
+
+def message(character, quote):
+    capitalize(character)
+    capitalize(quote)
+    return "{} a dit : {}".format(character, quote)
+
+user_answer = input('Tapez entrée pour connaître une autre citation ou B pour quitter le programme.')
+
+while user_answer != "B":
+    print(message(get_random_item(characters), get_random_item(quotes)))
+    user_answer = input('Tapez entrée pour connaître une autre citation ou B pour quitter le programme.')
+
+
