@@ -24,5 +24,6 @@ user_answer = input('Tapez entrée pour connaître une autre citation ou B pour 
 while user_answer != "B":
     print(message(get_random_item(characters), get_random_item(quotes)))
     user_answer = input('Tapez entrée pour connaître une autre citation ou B pour quitter le programme.')
-
+    
+print ("end of file")
 
